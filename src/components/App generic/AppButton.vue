@@ -1,0 +1,37 @@
+<script>
+export default {
+    name: 'GenericButton',
+    props: {
+        text: String,
+        bgColor: String
+    }
+}
+</script>
+
+<template>
+    <a href="#" :class="{ 'bg-orange': bgColor === 'orange' }">{{ text }}</a>
+</template>
+
+<style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
+// BUTTON STYLE
+a {
+    text-transform: uppercase;
+    padding: 20px 35px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: $white;
+
+    &::after {
+        content: " | \27F6";
+        font-size: 30px;
+        font-weight: 100;
+    }
+
+    &.bg-orange {
+        background-color: $orange;
+        color: $white;
+    }
+}
+</style>

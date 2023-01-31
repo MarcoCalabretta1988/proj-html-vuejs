@@ -1,8 +1,9 @@
 <script>
-import { mainNavLinks } from '../data/index'
+import AppMainNav from './AppMainNav.vue';
+import HeaderJumbo from './HeaderJumbo.vue';
 export default {
     name: 'AppHeader',
-    data: () => ({ mainNavLinks })
+    components: { HeaderJumbo, AppMainNav }
 }
 </script>
 
@@ -14,21 +15,17 @@ export default {
             <nav class="d-flex justify-content-between align-items-center p-4 mx-4">
 
                 <!-- LOGO -->
-                <img src="../assets/img/logo-img-01.png" alt="Logo">
+                <a href="#">
+                    <img src="../assets/img/logo-img-01.png" alt="Logo">
+                </a>
 
                 <!-- MAIN NAVBAR -->
 
-                <!-- possibile componente nav -->
-                <ul>
-                    <li v-for="(link, i) in mainNavLinks"><a href="#">{{ link }}</a></li>
-                    <li><a href="#"><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></a></li>
-                    <li><a href="#"><font-awesome-icon icon="fa-solid fa-bars" /></a></li>
+                <app-main-nav></app-main-nav>
 
-                </ul>
             </nav>
         </section>
-        <section id="jumbotron"></section>
-
+        <header-jumbo></header-jumbo>
     </header>
 </template>
 
@@ -49,35 +46,9 @@ header {
             height: auto;
         }
 
-        ul {
-            // Possibile mixin?
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-transform: uppercase;
 
-            li {
-                margin: 0 20px;
-                font-weight: 500;
-
-                & a:hover {
-                    color: $orange;
-                    position: relative;
-
-                    &::before {
-                        position: absolute;
-                        right: 100%;
-                        bottom: 65%;
-                        transform: translateY(50%);
-                        content: "\2192 ";
-                        font-size: 40px;
-                        line-height: 0;
-                        padding: 5px;
-                    }
-
-                }
-            }
-        }
     }
+
+
 }
 </style>
