@@ -1,9 +1,11 @@
 <script>
 import { footerNavLinks, contacts, twitterMsg } from '../../data';
+import AppFormInput from '../App generic/AppFormInput.vue';
 
 export default {
     name: 'FooterNav',
-    data: () => ({ footerNavLinks, contacts, twitterMsg, footerFormText: '' }),
+    data: () => ({ footerNavLinks, contacts, twitterMsg, }),
+    components: { AppFormInput }
 
 }
 </script>
@@ -55,8 +57,7 @@ export default {
                     }}</a></li>
                 </ul>
                 <form class="input-group mb-3" @submit.prevent="$emit('form-submit')">
-                    <input type="text" class="form-control " placeholder="Your name" v-model.trim="footerFormText"
-                        @keyup="$emit('term-change', footerFormText)">
+                    <app-form-input type="text" placeholder="Your name"></app-form-input>
                     <button class="btn btn-outline-secondary" type="button">SUBSCRIBE</button>
                 </form>
             </div>
@@ -73,19 +74,7 @@ export default {
     font-size: 14px;
 
 
-    input {
-        background-color: transparent;
-        border: none;
-        color: $grey;
-        border-bottom: 1px solid $grey;
-        border-radius: 0;
-        font-size: 14px;
 
-
-        &::placeholder {
-            color: $grey;
-        }
-    }
 
     button {
         background-color: transparent;
