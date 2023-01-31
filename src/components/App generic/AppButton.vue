@@ -19,6 +19,7 @@ export default {
 a {
     text-transform: uppercase;
     padding: 20px 35px;
+    margin-right: 15px;
     font-size: 14px;
     font-weight: 600;
     background-color: $white;
