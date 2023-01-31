@@ -1,6 +1,6 @@
 <script>
-import AppMainNav from './AppMainNav.vue';
-import HeaderJumbo from './HeaderJumbo.vue';
+import AppMainNav from './Header component/AppMainNav.vue';
+import HeaderJumbo from './Header component/HeaderJumbo.vue';
 export default {
     name: 'AppHeader',
     components: { HeaderJumbo, AppMainNav }

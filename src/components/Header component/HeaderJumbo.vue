@@ -1,5 +1,5 @@
 <script>
-import AppButton from './App generic/AppButton.vue'
+import AppButton from '../App generic/AppButton.vue'
 export default {
     name: 'HeaderJumbo',
     components: { AppButton }
@@ -30,7 +30,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/partials/variables' as *;
+@use '../../assets/scss/partials/variables' as *;
 
 #jumbotron {
     height: calc(100% - 100px);

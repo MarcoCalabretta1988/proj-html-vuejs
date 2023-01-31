@@ -1,5 +1,5 @@
 <script>
-import { mainNavLinks } from '../data/index'
+import { mainNavLinks } from '../../data/index'
 export default {
     name: 'AppMainNav',
     data: () => ({ mainNavLinks }),
@@ -17,7 +17,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use '../assets/scss/partials/variables' as *;
+@use '../../assets/scss/partials/variables' as *;
 
 ul {
 
