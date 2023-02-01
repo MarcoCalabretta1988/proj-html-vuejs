@@ -1,11 +1,12 @@
 <script>
 import SectionTitle from './App generic/SectionTitle.vue';
 import SpecialtiesCard from './Main components/SpecialtiesCard.vue';
-import { specialtiesOption } from '../data';
+import CalendarCard from './Main components/CalendarCard.vue'
+import { specialtiesOption, events } from '../data';
 export default {
     name: 'AppMain',
-    components: { SectionTitle, SpecialtiesCard },
-    data: () => ({ specialtiesOption })
+    components: { SectionTitle, SpecialtiesCard, CalendarCard },
+    data: () => ({ specialtiesOption, events })
 }
 </script>
 
@@ -60,6 +61,20 @@ export default {
             </div>
         </section>
         <!-- EVENTS SECTION -->
+        <section id="event">
+            <div class="container">
+                <div class="event-calendar">
+                    <h3>Upcoming Events</h3>
+                    <calendar-card v-for="event in events" :key="event.id" :event="event"></calendar-card>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- VIDEO SECTION -->
+        <section id="video">
+            <font-awesome-icon icon="fa-solid fa-play" class="video-icon" />
+        </section>
     </main>
 </template>
 
@@ -68,14 +83,16 @@ export default {
 
 main {
     min-height: 100vh;
+    padding-top: 500px;
 }
 
 // SPECIALTIES LAYOUT
 #specialties {
     position: absolute;
-    bottom: 55%;
+    top: -4%;
     left: 5%;
     right: 5%;
+    z-index: 1;
     background-color: $white;
 
     .specialties-title {
@@ -90,7 +107,6 @@ main {
     background-position: 95% 80%;
     background-repeat: no-repeat;
     background-color: $greywhite;
-    padding-top: 500px;
     margin-bottom: 50px;
 
     figure {
@@ -109,6 +125,11 @@ main {
                 font-size: 30px;
                 color: $white;
                 cursor: pointer;
+
+                &:hover {
+                    color: $black;
+                    background-color: $white;
+                }
             }
         }
 
@@ -119,10 +140,10 @@ main {
     }
 
     .blog-article-text {
-        height: 300px;
+        height: 350px;
         width: 700px;
         position: absolute;
-        top: 15%;
+        top: 18%;
         left: 40%;
         padding: 50px;
         background-color: $white;
@@ -155,7 +176,55 @@ main {
             a {
                 color: $orange;
                 font-size: 25px;
+
+                &:hover {
+                    color: $black;
+                }
             }
+        }
+
+    }
+}
+
+//SECTION EVENT
+#event {
+    background-image: url(../assets/img/h1-img-09.jpg);
+    min-height: 100vh;
+    position: relative;
+
+    .event-calendar {
+        background-color: $white;
+        width: 500px;
+        position: absolute;
+        left: 15%;
+        top: 20%;
+
+        h3 {
+            padding: 15px 35px;
+            box-shadow: 1px 1px 5px #888888;
+            font-family: 'Playfair Display', serif;
+        }
+
+    }
+}
+
+//SECTION VIDEO
+#video {
+    height: 100vh;
+    background-image: url(../assets/img/h1-img-04.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .video-icon {
+        color: $white;
+        font-size: 50px;
+        cursor: pointer;
+
+        &:hover {
+            color: $orange;
         }
     }
 }

@@ -101,6 +101,39 @@ const footerData = [
     },
 ]
 
+const events = [
+    {
+        id: 1,
+        day: 7,
+        month: 'Jan',
+        year: 2022,
+        location: 'Melbourne',
+        adress: 'Cambrige, Ma 02138 USA',
+        start: '9:00 am',
+        end: '5:00 pm'
+    },
+    {
+        id: 2,
+        day: 11,
+        month: 'Jan',
+        year: 2022,
+        location: 'New York',
+        adress: 'Cambrige, Ma 02138 USA',
+        start: '9:00 am',
+        end: '5:00 pm'
+    },
+    {
+        id: 3,
+        day: 21,
+        month: 'Jan',
+        year: 2022,
+        location: 'London',
+        adress: 'Cambrige, Ma 02138 USA',
+        start: '9:00 am',
+        end: '5:00 pm'
+    },
+]
 
 
-export { mainNavLinks, footerData, specialtiesOption }
+
+export { mainNavLinks, footerData, specialtiesOption, events }
