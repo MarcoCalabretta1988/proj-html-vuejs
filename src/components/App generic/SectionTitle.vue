@@ -25,7 +25,7 @@ export default {
   background-color: $white;
 
   h1 {
-    font-size: 60px;
+    font-size: 50px;
 
 
     .point {
@@ -34,7 +34,7 @@ export default {
   }
 
   p {
-    font-size: 21px;
+    font-size: 20px;
   }
 }
 

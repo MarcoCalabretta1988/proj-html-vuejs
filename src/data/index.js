@@ -22,6 +22,28 @@ const specialtiesOption = [
     },
 ]
 
+const skills = [
+    {
+        name: 'Mentorship',
+        perc: '78%',
+        skill: 'mentorship'
+    },
+    {
+        name: 'Education',
+        perc: '95%',
+        skill: 'education'
+    },
+    {
+        name: 'Learning',
+        perc: '65%',
+        skill: 'learning'
+    },
+    {
+        name: 'Motivation',
+        perc: '83%',
+        skill: 'motivation'
+    },
+]
 
 const footerData = [
     {
@@ -136,4 +158,4 @@ const events = [
 
 
 
-export { mainNavLinks, footerData, specialtiesOption, events }
+export { mainNavLinks, footerData, specialtiesOption, events, skills }

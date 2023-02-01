@@ -2,11 +2,12 @@
 import SectionTitle from './App generic/SectionTitle.vue';
 import SpecialtiesCard from './Main components/SpecialtiesCard.vue';
 import CalendarCard from './Main components/CalendarCard.vue'
-import { specialtiesOption, events } from '../data';
+import LeaderSkill from './Main components/leaderSkill.vue';
+import { specialtiesOption, events, skills } from '../data';
 export default {
     name: 'AppMain',
-    components: { SectionTitle, SpecialtiesCard, CalendarCard },
-    data: () => ({ specialtiesOption, events })
+    components: { SectionTitle, SpecialtiesCard, CalendarCard, LeaderSkill },
+    data: () => ({ specialtiesOption, events, skills })
 }
 </script>
 
@@ -69,6 +70,28 @@ export default {
 
                 </div>
 
+            </div>
+        </section>
+        <!-- LEADER SECTION -->
+        <section id="leader">
+            <div class="container h-100">
+                <div class="row row-cols 2 h-100">
+                    <!-- SECTION TITLE -->
+                    <div class="col h-100 d-flex flex-column justify-content-center p-3">
+                        <section-title title="Creative Leader"
+                            text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, deleniti illum delectus nobis, voluptate rem ipsa praesentium obcaecati sapiente accusantium sequi aliquid sit sint, impedit magnam qui nemo! Esse, iste."
+                            div-postion="start"></section-title>
+                        <a href="#" class="py-4 fw-bold">READ MORE</a>
+                    </div>
+                    <!-- SKILL SECTION -->
+                    <div class="col d-flex flex-column justify-content-center p-3">
+                        <ul>
+                            <li v-for="skill in skills" :key="skill.name" class="py-3"> <leader-skill
+                                    :title="skill.name" :percentual="skill.perc" :skill="skill.skill"></leader-skill>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- TESTIMONIALS SECTION -->
@@ -212,13 +235,13 @@ main {
     background-image: url(../assets/img/h1-img-09.jpg);
     min-height: 100vh;
     position: relative;
+    display: flex;
+    align-items: center;
 
     .event-calendar {
         background-color: $white;
         width: 500px;
-        position: absolute;
-        left: 15%;
-        top: 20%;
+
 
         h3 {
             padding: 15px 35px;
@@ -227,6 +250,13 @@ main {
         }
 
     }
+}
+
+//LEADER SECTION LAYOUT
+#leader {
+    background-color: $white;
+    height: 550px;
+
 }
 
 //TESTIMONIALS SECTION LAYOUT
