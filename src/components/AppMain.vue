@@ -71,6 +71,27 @@ export default {
 
             </div>
         </section>
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials">
+            <div class="change-testimoniance prev">&#10229;</div>
+            <div class=" change-testimoniance next">&#10230;</div>
+            <h1>Testimonials.</h1>
+            <div class="testimoniance">
+                <img src="../assets/img/h3-img-04.png" alt="Cynthia Clark">
+                <h5>Cynthia Clark</h5>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua"</p>
+                <div class="d-flex justify-content-center py-4">
+                    <span>01</span>
+                    <span class="progress-bar">
+                        <div class="bar">
+                            <div class="bar-progress"></div>
+                        </div>
+                    </span>
+                    <span>03</span>
+                </div>
+            </div>
+        </section>
         <!-- VIDEO SECTION -->
         <section id="video">
             <font-awesome-icon icon="fa-solid fa-play" class="video-icon" />
@@ -89,7 +110,7 @@ main {
 // SPECIALTIES LAYOUT
 #specialties {
     position: absolute;
-    top: -4%;
+    top: -2%;
     left: 5%;
     right: 5%;
     z-index: 1;
@@ -186,7 +207,7 @@ main {
     }
 }
 
-//SECTION EVENT
+//SECTION EVENT LAYOUT
 #event {
     background-image: url(../assets/img/h1-img-09.jpg);
     min-height: 100vh;
@@ -208,7 +229,82 @@ main {
     }
 }
 
-//SECTION VIDEO
+//TESTIMONIALS SECTION LAYOUT
+#testimonials {
+    height: 630px;
+    background-color: $greydark;
+    text-align: center;
+    position: relative;
+
+    .progress-bar {
+        width: 120px;
+        margin: 0 15px;
+
+        .bar {
+            position: relative;
+            height: 2px;
+            background-color: $lightgrey;
+        }
+
+        .bar-progress {
+            background-color: $grey;
+            height: 2px;
+            position: absolute;
+            top: 0;
+            left: 33%;
+            right: 0;
+        }
+    }
+
+    .change-testimoniance {
+
+        position: absolute;
+        top: 50%;
+        font-size: 35px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: $lightgrey;
+
+        &:hover {
+            color: $orange;
+        }
+
+        &.prev {
+            right: 92%;
+
+        }
+
+        &.next {
+            left: 92%;
+        }
+    }
+
+    .testimoniance {
+        color: $lightgrey;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h5 {
+            padding: 20px;
+        }
+
+        p {
+            font-size: 25px;
+            color: $greylight;
+        }
+    }
+
+    h1 {
+        font-size: 250px;
+        color: $black-grey;
+
+    }
+
+}
+
+//SECTION VIDEO LAYOUT
 #video {
     height: 100vh;
     background-image: url(../assets/img/h1-img-04.jpg);
