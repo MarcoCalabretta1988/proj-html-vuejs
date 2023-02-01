@@ -64,11 +64,11 @@ export default {
         cursor: pointer;
 
         &.prev {
-            right: 110%;
+            left: -12%;
         }
 
         &.next {
-            left: 110%;
+            right: -12%;
         }
     }
 }

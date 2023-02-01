@@ -1,5 +1,26 @@
 const mainNavLinks = ['homes', 'pages', 'blog', 'shop', 'events', 'elements']
-
+const specialtiesOption = [
+    {
+        id: 1,
+        title: 'Knowing',
+        text: 'Loremipsum dolor sit amet,quis consenct'
+    },
+    {
+        id: 2,
+        title: 'Selling',
+        text: 'Loremipsum dolor sit amet,quis consenct'
+    },
+    {
+        id: 3,
+        title: 'Learning',
+        text: 'Loremipsum dolor sit amet,quis consenct'
+    },
+    {
+        id: 4,
+        title: 'Contact',
+        text: 'Loremipsum dolor sit amet,quis consenct'
+    },
+]
 
 
 const footerData = [
@@ -82,4 +103,4 @@ const footerData = [
 
 
 
-export { mainNavLinks, footerData }
+export { mainNavLinks, footerData, specialtiesOption }

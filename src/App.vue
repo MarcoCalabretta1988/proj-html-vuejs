@@ -1,10 +1,11 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 export default {
   name: 'Everlead',
   data: () => ({ footerFormText: '' }),
-  components: { AppHeader, AppFooter },
+  components: { AppHeader, AppMain, AppFooter },
   methods: {
     //Recover the value to footer form
     onTermChange(term) {
@@ -20,7 +21,7 @@ export default {
 
 <template>
   <app-header></app-header>
-
+  <app-main></app-main>
   <app-footer @term-change="onTermChange" @form-submit="subscriveContact"></app-footer>
 
 </template>

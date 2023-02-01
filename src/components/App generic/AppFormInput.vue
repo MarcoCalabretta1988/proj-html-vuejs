@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <input :type="type" class="form-control " :placeholder="placeholder" v-model.trim="FormText"
+    <input :type="type" class="form-control " :placeholder="placeholder || 'Cerca'" v-model.trim="FormText"
         @keyup="$emit('term-change', footerFormText)">
 </template>
 
