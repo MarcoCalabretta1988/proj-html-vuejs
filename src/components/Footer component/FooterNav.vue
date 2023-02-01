@@ -20,9 +20,9 @@ export default {
                     goals &
                     achieving business succes</p>
                 <div class="social-ico">
-                    <font-awesome-icon icon="fa-brands fa-linkedin" />
-                    <font-awesome-icon icon="fa-brands fa-facebook" />
-                    <font-awesome-icon icon="fa-brands fa-square-twitter" />
+                    <a href="#"><font-awesome-icon icon="fa-brands fa-linkedin" /></a>
+                    <a href="#"><font-awesome-icon icon="fa-brands fa-facebook" /></a>
+                    <a href="#"><font-awesome-icon icon="fa-brands fa-square-twitter" /></a>
                 </div>
             </div>
             <div class="col twitter">
@@ -57,7 +57,8 @@ export default {
                     }}</a></li>
                 </ul>
                 <form class="input-group mb-3" @submit.prevent="$emit('form-submit')">
-                    <app-form-input type="text" placeholder="Your name"></app-form-input>
+                    <app-form-input type="text" placeholder="Your name"
+                        @term-change="$emit('term-change', $event)"></app-form-input>
                     <button class="btn btn-outline-secondary" type="button">SUBSCRIBE</button>
                 </form>
             </div>
@@ -122,7 +123,6 @@ export default {
         color: $white;
         padding: 0 5px;
         font-size: 25px;
-        cursor: pointer;
     }
 
 }

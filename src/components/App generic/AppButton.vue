@@ -3,13 +3,12 @@ export default {
     name: 'GenericButton',
     props: {
         text: String,
-        bgColor: String
     }
 }
 </script>
 
 <template>
-    <a href="#" :class="{ 'bg-orange': bgColor === 'orange' }">{{ text }}</a>
+    <a href="#">{{ text }}</a>
 </template>
 
 <style lang="scss" scoped>
@@ -30,7 +29,7 @@ a {
         font-weight: 100;
     }
 
-    &.bg-orange {
+    &:hover {
         background-color: $orange;
         color: $white;
     }

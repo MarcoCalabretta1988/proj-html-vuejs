@@ -21,7 +21,7 @@ export default {
                 <!-- BUTTON GROUP -->
                 <div class="button-nav">
                     <app-button text="read more"></app-button>
-                    <app-button text="purchase" bg-color="orange"></app-button>
+                    <app-button text="purchase"></app-button>
                 </div>
             </div>
         </div>

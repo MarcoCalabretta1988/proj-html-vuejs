@@ -6,9 +6,11 @@ export default {
   data: () => ({ footerFormText: '' }),
   components: { AppHeader, AppFooter },
   methods: {
+    //Recover the value to footer form
     onTermChange(term) {
       this.footerFormText = term;
     },
+    //when user submit footer form
     subscriveContact() {
 
     }
