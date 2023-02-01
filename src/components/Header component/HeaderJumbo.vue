@@ -9,7 +9,7 @@ export default {
 <template>
     <!-- JUMBOTRON -->
     <section id="jumbotron" class="container">
-        <div class="row row-cols-2 h-100">
+        <div class="row row-cols-2 h-100 position-relative">
             <div class="col d-flex justify-content-center flex-column h-100">
                 <!-- CHANGE PIC ARROW -->
                 <div class="change-pic prev">&#10229;</div>
@@ -34,7 +34,7 @@ export default {
 
 #jumbotron {
     height: calc(100% - 100px);
-    position: relative;
+
 
     h1 {
         font-size: 90px;
@@ -64,11 +64,11 @@ export default {
         cursor: pointer;
 
         &.prev {
-            right: 115%;
+            right: 110%;
         }
 
         &.next {
-            left: 112%;
+            left: 110%;
         }
     }
 }

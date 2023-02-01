@@ -30,7 +30,8 @@ ul {
         margin: 0 25px;
         font-weight: 500;
 
-        & a:hover {
+        & a:hover,
+        a:active {
             color: $orange;
             position: relative;
 
