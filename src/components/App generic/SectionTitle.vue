@@ -23,12 +23,10 @@ export default {
 
 .section-title {
   background-color: $white;
-  width: 500px;
 
   h1 {
     font-size: 60px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
+
 
     .point {
       color: $orange;
@@ -44,7 +42,5 @@ export default {
   height: 1px;
   border: 1px solid $orange;
   width: 80px;
-
-
 }
 </style>
