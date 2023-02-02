@@ -11,7 +11,7 @@ export default {
 
 <template>
     <div class="calendar-card py-4">
-        <div class="row d-flex align-items-center">
+        <div class="row d-flex">
             <!-- EVIDENCE DATE SQUARE -->
             <div class="col-3 px-4">
                 <div class="evidence-date text-center">
@@ -58,7 +58,12 @@ export default {
         h5 {
             font-weight: 700;
             padding: 3px 0;
+            padding-top: 0;
             color: $black;
+
+            &:hover {
+                color: $main;
+            }
         }
 
         .icon {

@@ -8,11 +8,17 @@ import GenericButton from './App generic/GenericButton.vue';
 import AppButton from './App generic/AppButton.vue';
 import NewsCard from './Main components/NewsCard.vue';
 import AppFormInput from './App generic/AppFormInput.vue';
-import { specialtiesOption, events, skills, news } from '../data';
+import BrandCard from './Main components/BrandCard.vue';
+import { specialtiesOption, events, skills, news, brands } from '../data';
 export default {
     name: 'AppMain',
-    components: { SectionTitle, AppButton, SpecialtiesCard, AppFormInput, NewsCard, GenericButton, CalendarCard, LeaderSkill, Slider },
-    data: () => ({ specialtiesOption, events, skills, news })
+    components: { SectionTitle, AppButton, SpecialtiesCard, BrandCard, AppFormInput, NewsCard, GenericButton, CalendarCard, LeaderSkill, Slider },
+    data: () => ({ specialtiesOption, events, skills, news, brands, textAreaText: '' }),
+    methods: {
+        sendForm() {
+
+        }
+    }
 }
 </script>
 
@@ -159,7 +165,7 @@ export default {
                                     @term-change="$emit('mail-change', $event)"></app-form-input>
                             </div>
                             <div class="form-floating my-3">
-                                <textarea class="form-control" placeholder="Leave a comment here"
+                                <textarea class="form-control" v-model.trim="textAreaText"
                                     id="floatingTextarea2Disabled" style="height: 100px"></textarea>
                                 <label for="floatingTextarea2Disabled">Write a message</label>
                             </div>
@@ -170,7 +176,15 @@ export default {
             </div>
         </section>
         <!-- BRANDS SECTION -->
-        <section id="brands"></section>
+        <section id="brands">
+            <div class="container h-100">
+                <div class="row row-cols-5 h-100">
+                    <brand-card v-for="brand in brands" :key="brand.id" :img="brand.img.logo"
+                        :img-hovered="brand.img.hoverLogo" :brand-name="brand.name"></brand-card>
+                </div>
+            </div>
+
+        </section>
     </main>
 </template>
 
@@ -185,7 +199,7 @@ main {
 // SPECIALTIES LAYOUT
 #specialties {
     position: absolute;
-    top: -2%;
+    top: -89px;
     left: 5%;
     right: 5%;
     z-index: 1;
@@ -330,6 +344,15 @@ main {
     text-align: center;
     position: relative;
 
+    h1 {
+        font-size: 250px;
+        color: $black-grey;
+        position: absolute;
+        bottom: 60%;
+        left: 0;
+        right: 0;
+    }
+
     .progress-bar {
         width: 120px;
         margin: 0 15px;
@@ -369,11 +392,6 @@ main {
         }
     }
 
-    h1 {
-        font-size: 250px;
-        color: $black-grey;
-
-    }
 
 }
 
@@ -455,6 +473,8 @@ main {
 //SECTION BRANDS
 #brands {
     height: 300px;
-    background-color: aquamarine;
+    background-color: $greywhite;
+
+
 }
 </style>

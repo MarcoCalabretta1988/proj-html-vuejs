@@ -198,6 +198,48 @@ const news = [
     },
 ]
 
+const brands = [
+    {
+        id: 1,
+        name: 'AC company',
+        img: {
+            logo: '03',
+            hoverLogo: '04-1',
+        }
+    },
+    {
+        id: 2,
+        name: 'Pen Sign',
+        img: {
+            logo: '05',
+            hoverLogo: '06-1',
+        }
+    },
+    {
+        id: 3,
+        name: 'BB company',
+        img: {
+            logo: '07',
+            hoverLogo: '08-1',
+        }
+    },
+    {
+        id: 4,
+        name: 'A team',
+        img: {
+            logo: '09',
+            hoverLogo: '10-1',
+        }
+    },
+    {
+        id: 5,
+        name: 'RKO',
+        img: {
+            logo: '01',
+            hoverLogo: '02',
+        }
+    },
+]
 
 
-export { mainNavLinks, news, footerData, specialtiesOption, events, skills }
+export { mainNavLinks, news, footerData, specialtiesOption, events, skills, brands }

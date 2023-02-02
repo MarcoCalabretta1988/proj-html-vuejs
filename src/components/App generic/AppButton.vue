@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-    <a href="#">{{ text }}</a>
+    <a href="#" @click="$emit('clicked')">{{ text }}</a>
 </template>
 
 <style lang="scss" scoped>

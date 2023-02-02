@@ -11,7 +11,7 @@ export default {
 <template>
     <div class="generic-button">
 
-        <a href="#" :style="`background-color = ${bgColor}`">{{ text }}</a>
+        <a href="#" :style="`background-color = ${bgColor}`" @click="$emit('clicked')">{{ text }}</a>
     </div>
 </template>
 

@@ -11,7 +11,7 @@ export default {
 
 <template>
     <input :type="type" class="form-control " :placeholder="placeholder || 'Cerca'" v-model.trim="FormText"
-        @keyup="$emit('term-change', footerFormText)">
+        @keyup="$emit('term-change', FormText)">
 </template>
 
 <style lang="scss" scoped>
