@@ -1,19 +1,19 @@
 <script>
 import AppButton from '../App generic/AppButton.vue'
+import Slider from '../App generic/Slider.vue';
 export default {
     name: 'HeaderJumbo',
-    components: { AppButton }
+    components: { AppButton, Slider }
 }
 </script>
 
 <template>
     <!-- JUMBOTRON -->
     <section id="jumbotron" class="container">
+        <!-- SLIDER -->
+        <slider></slider>
         <div class="row row-cols-2 h-100 position-relative">
             <div class="col d-flex justify-content-center flex-column h-100">
-                <!-- CHANGE PIC ARROW -->
-                <div class="change-pic prev">&#10229;</div>
-                <div class=" change-pic next">&#10230;</div>
                 <!-- TITLE AND TEXT -->
                 <h1>Our Team<span>.</span></h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam exercitationem unde doloremque
@@ -54,22 +54,5 @@ export default {
         padding: 15px 0;
     }
 
-    //CHANGE PIC ARROW STYLE
-    .change-pic {
-
-        position: absolute;
-        top: 50%;
-        font-size: 35px;
-        transform: translateY(-50%);
-        cursor: pointer;
-
-        &.prev {
-            left: -12%;
-        }
-
-        &.next {
-            right: -12%;
-        }
-    }
 }
 </style>

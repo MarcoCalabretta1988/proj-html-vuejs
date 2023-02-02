@@ -3,10 +3,11 @@ import SectionTitle from './App generic/SectionTitle.vue';
 import SpecialtiesCard from './Main components/SpecialtiesCard.vue';
 import CalendarCard from './Main components/CalendarCard.vue'
 import LeaderSkill from './Main components/leaderSkill.vue';
+import Slider from './App generic/Slider.vue';
 import { specialtiesOption, events, skills } from '../data';
 export default {
     name: 'AppMain',
-    components: { SectionTitle, SpecialtiesCard, CalendarCard, LeaderSkill },
+    components: { SectionTitle, SpecialtiesCard, CalendarCard, LeaderSkill, Slider },
     data: () => ({ specialtiesOption, events, skills })
 }
 </script>
@@ -96,8 +97,7 @@ export default {
         </section>
         <!-- TESTIMONIALS SECTION -->
         <section id="testimonials">
-            <div class="change-testimoniance prev">&#10229;</div>
-            <div class=" change-testimoniance next">&#10230;</div>
+            <slider></slider>
             <h1>Testimonials.</h1>
             <div class="testimoniance">
                 <img src="../assets/img/h3-img-04.png" alt="Cynthia Clark">
@@ -242,6 +242,9 @@ main {
         background-color: $white;
         width: 500px;
 
+        a:hover {
+            color: $orange;
+        }
 
         h3 {
             padding: 15px 35px;
@@ -286,28 +289,7 @@ main {
         }
     }
 
-    .change-testimoniance {
 
-        position: absolute;
-        top: 50%;
-        font-size: 35px;
-        transform: translateY(-50%);
-        cursor: pointer;
-        color: $lightgrey;
-
-        &:hover {
-            color: $orange;
-        }
-
-        &.prev {
-            right: 92%;
-
-        }
-
-        &.next {
-            left: 92%;
-        }
-    }
 
     .testimoniance {
         color: $lightgrey;
