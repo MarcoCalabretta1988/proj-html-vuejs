@@ -1,4 +1,5 @@
 <script>
+//IMPORT COMPONENT
 import AppButton from '../App generic/AppButton.vue'
 import Slider from '../App generic/Slider.vue';
 export default {
@@ -32,6 +33,7 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
 
+//jUBOTRON LAYOUT
 #jumbotron {
     height: calc(100% - 100px);
 

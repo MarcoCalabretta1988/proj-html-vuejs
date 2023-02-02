@@ -1,4 +1,5 @@
 <script>
+// IMPORT COMPONENT
 import AppMainNav from './Header component/AppMainNav.vue';
 import HeaderJumbo from './Header component/HeaderJumbo.vue';
 export default {
@@ -9,8 +10,7 @@ export default {
 
 <template>
     <header>
-
-
+        <!-- HEADER -->
         <section id="main-nav">
             <nav class="d-flex justify-content-between align-items-center p-4 mx-4">
 
@@ -32,6 +32,7 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
 
+//HEADER LAYOUT
 header {
     height: 95vh;
     background-image: url(../assets/img/rev-slider-main-home-img-03.jpg);

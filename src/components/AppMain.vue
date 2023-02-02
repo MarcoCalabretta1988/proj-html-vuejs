@@ -1,4 +1,5 @@
 <script>
+//IMPORT COMPONENTS
 import SectionTitle from './App generic/SectionTitle.vue';
 import SpecialtiesCard from './Main components/SpecialtiesCard.vue';
 import CalendarCard from './Main components/CalendarCard.vue'
@@ -9,7 +10,10 @@ import AppButton from './App generic/AppButton.vue';
 import NewsCard from './Main components/NewsCard.vue';
 import AppFormInput from './App generic/AppFormInput.vue';
 import BrandCard from './Main components/BrandCard.vue';
+
+//IMPORT DATA
 import { specialtiesOption, events, skills, news, brands } from '../data';
+
 export default {
     name: 'AppMain',
     components: { SectionTitle, AppButton, SpecialtiesCard, BrandCard, AppFormInput, NewsCard, GenericButton, CalendarCard, LeaderSkill, Slider },
@@ -77,6 +81,7 @@ export default {
             <div class="container">
                 <div class="event-calendar">
                     <h3>Upcoming Events</h3>
+                    <!-- USE CALENDAR CARD COMPONENT FOR EVENT LIST -->
                     <calendar-card v-for="event in events" :key="event.id" :event="event"></calendar-card>
 
                 </div>
@@ -107,24 +112,31 @@ export default {
         </section>
         <!-- LATEST NEWS SECTION -->
         <section id="latest-news" class="position-relative">
+            <!-- ADD SLIDER LAYOUT -->
             <slider></slider>
             <div class="container text-center ">
+                <!-- ADD SECTION TITLE -->
                 <section-title title="Latest news" text="Lorem ipsum dolor sit amet,consecteur adipscing elit"
                     div-position="center"></section-title>
                 <div class="row row-cols3 py-5">
+                    <!-- USE NEW CARD COMPONENT FOR GENERATE NEWS LIST -->
                     <news-card v-for="news in news" :key="news.id" :news="news"></news-card>
                 </div>
             </div>
         </section>
         <!-- TESTIMONIALS SECTION -->
         <section id="testimonials">
+            <!-- ADD SLIDER LAYOUT -->
             <slider></slider>
+            <!-- BACKGROUND TITLE -->
             <h1>Testimonials.</h1>
+            <!-- TESTIMONIAL SECTION CARD -->
             <div class="testimoniance">
                 <img src="../assets/img/h3-img-04.png" alt="Cynthia Clark">
                 <h5>Cynthia Clark</h5>
                 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et
                     dolore magna aliqua"</p>
+                <!-- TESTIMONIANC BAR NUMBER -->
                 <div class="d-flex justify-content-center py-4">
                     <span>01</span>
                     <span class="progress-bar">
@@ -138,12 +150,14 @@ export default {
         </section>
         <!-- VIDEO SECTION -->
         <section id="video">
+            <!-- ADD PLAY ICON -->
             <font-awesome-icon icon="fa-solid fa-play" class="video-icon" />
         </section>
         <!-- CONTACT US SECTION -->
         <section id="contact-us">
             <div class="container h-100">
                 <div class="row row-cols-2 h-100 align-items-center">
+                    <!-- WORLD LOCATION SECTION, IMPORT GENERIC BUTTON IN BOTTOM -->
                     <div class="col world-location">
                         <img class="location america" src="../assets/img/h1-contact-rev-02.png" alt="Location America">
                         <img class="location europe" src="../assets/img/h1-contact-rev-02.png" alt="Location Europe">
@@ -154,22 +168,27 @@ export default {
                             <generic-button text="READ MORE"></generic-button>
                         </div>
                     </div>
+                    <!-- CONTACT US SECTION FORM,IMPORT SECTION TITLE AND APP FORM INPUT -->
                     <div class="col">
                         <section-title title="Contact us" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
                             div-position="start"></section-title>
+                        <!-- SECTION FORM -->
                         <form @submit.prevent="$emit('form-submit')" class="py-4">
                             <div class="d-flex py-3">
+                                <!-- INPUT FORM -->
                                 <app-form-input type="text" placeholder="Your name" class="me-3"
                                     @term-change="$emit('term-change', $event)"></app-form-input>
                                 <app-form-input type="email" placeholder="Your Email"
                                     @term-change="$emit('mail-change', $event)"></app-form-input>
                             </div>
                             <div class="form-floating my-3">
+                                <!-- TEXT AREA -->
                                 <textarea class="form-control" v-model.trim="textAreaText"
                                     id="floatingTextarea2Disabled" style="height: 100px"></textarea>
                                 <label for="floatingTextarea2Disabled">Write a message</label>
                             </div>
                         </form>
+                        <!-- BUTTON FOR SUBMIT -->
                         <app-button text="send" class="contact-us-button"></app-button>
                     </div>
                 </div>
@@ -179,6 +198,7 @@ export default {
         <section id="brands">
             <div class="container h-100">
                 <div class="row row-cols-5 h-100">
+                    <!-- GENERATE BRANDS LIST WHIT COMPONENT -->
                     <brand-card v-for="brand in brands" :key="brand.id" :img="brand.img.logo"
                         :img-hovered="brand.img.hoverLogo" :brand-name="brand.name"></brand-card>
                 </div>

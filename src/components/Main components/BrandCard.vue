@@ -10,6 +10,7 @@ export default {
 </script>
 
 <template>
+    <!-- BRAND CARD -->
     <div class="brand-card">
         <figure>
             <img :src="`src/assets/img/h4-clients-img-${img}.png`" :alt="brandName" class="logo-img">
@@ -22,6 +23,7 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
 
+//BRAND CARD LAYOUT
 .brand-card {
     align-items: center;
     display: flex;

@@ -1,5 +1,7 @@
 <script>
+//IMPORT DATA
 import { mainNavLinks } from '../../data/index'
+
 export default {
     name: 'AppMainNav',
     data: () => ({ mainNavLinks }),
@@ -8,6 +10,7 @@ export default {
 </script>
 
 <template>
+    <!-- NAV MENU -->
     <ul>
         <li v-for="link in mainNavLinks" :key="link"><a href="#">{{ link }}</a></li>
         <li><a href="#"><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></a></li>
@@ -19,6 +22,7 @@ export default {
 <style scoped lang="scss">
 @use '../../assets/scss/partials/variables' as *;
 
+//MAIN NAV LAYOUT
 ul {
 
     display: flex;

@@ -1,4 +1,5 @@
 <script>
+//IMPORT COMPONENT
 import GenericButton from '../App generic/GenericButton.vue';
 export default {
     name: 'CalendarCard',
@@ -10,6 +11,7 @@ export default {
 </script>
 
 <template>
+    <!-- CALENDAR CARD -->
     <div class="calendar-card py-4">
         <div class="row d-flex">
             <!-- EVIDENCE DATE SQUARE -->

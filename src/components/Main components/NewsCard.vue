@@ -1,4 +1,5 @@
 <script>
+//IMPORT COMPONENT
 import GenericButton from '../App generic/GenericButton.vue';
 export default {
     name: 'NewsCard',
@@ -11,7 +12,9 @@ export default {
 </script>
 
 <template>
+    <!-- NEWS CARD -->
     <div class="col text-start">
+        <!-- NEWS FIGURE -->
         <figure class="position-relative">
             <div class="up-card-img">
                 <img :src="`src/assets/img/h1-blog-img-0${news.img.top}.jpg`" :alt="news.title">
@@ -19,10 +22,12 @@ export default {
             <img :src="`src/assets/img/h1-blog-img-0${news.img.bottom}.jpg`" :alt="news.title">
             <div class="label"><font-awesome-icon icon="fa-solid fa-tag" class="px-1" /> {{ news.img.label }}</div>
         </figure>
+        <!-- NEWS AUTHOR -->
         <div class="author py-2">
             <font-awesome-icon icon="fa-regular fa-clock" class="icon" /><span>{{ news.date }}</span>
             <font-awesome-icon icon="fa-regular fa-user" class="icon" /><span>{{ news.author }}</span>
         </div>
+        <!-- NEWS INFO -->
         <h3>{{ news.title }}</h3>
         <p>{{ news.text }} ...</p>
         <generic-button text="READ MORE"></generic-button>
@@ -32,6 +37,7 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
 
+//NEWS CARD LAYOUT
 figure {
 
     .up-card-img {

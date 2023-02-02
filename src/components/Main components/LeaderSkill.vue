@@ -10,10 +10,12 @@ export default {
 </script>
 
 <template>
+    <!-- LEADER SKILL INFO-->
     <div class="d-flex justify-content-between">
         <h4>{{ title }}</h4>
         <div>{{ percentual }}</div>
     </div>
+    <!-- PROGRESS BAR -->
     <span class="progress-bar">
         <div class="bar">
             <div class="bar-progress" :class="skill"></div>
@@ -24,6 +26,7 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
 
+//lEADER SKILL LAYOUT
 h4 {
     font-family: 'Playfair Display', serif;
 }

@@ -1,7 +1,9 @@
 <script>
+//IMPORT COMPONENT
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+
 export default {
   name: 'Everlead',
   data: () => ({ footerFormText: '', mainFormText: '', mainFormMail: '' }),
@@ -32,12 +34,16 @@ export default {
 </script>
 
 <template>
+  <!-- HEADER -->
   <app-header></app-header>
+  <!-- MAIN -->
   <app-main @term-change="onMainTermChange" @form-submit="subscriveContactUs" @mail-change="onMailChange"></app-main>
+  <!-- FOOTER -->
   <app-footer @term-change="onFooterTermChange" @form-submit="subscriveContact"></app-footer>
 
 </template>
 
 <style lang="scss">
+//LINK MAIN STYLE
 @use './assets/scss/style.scss'
 </style>
