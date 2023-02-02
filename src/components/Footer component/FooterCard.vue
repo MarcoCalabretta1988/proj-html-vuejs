@@ -16,7 +16,7 @@ export default {
         <ul>
             <!-- FOOTER LIST ELEMENT -->
             <li v-for="link in element.links" :key="link.id"><a href="#" class="d-flex ">
-                    <font-awesome-icon :icon="link.icon" class="icon p-1" />
+                    <font-awesome-icon :icon="`fa-${link.icon}`" class="icon p-1" />
                     <span class="px-2">{{ link.text }}</span>
                 </a></li>
         </ul>

@@ -57,12 +57,12 @@ const footerData = [
         links: [
             {
                 id: 1,
-                icon: 'fa-brands fa-twitter',
+                icon: 'brands fa-twitter',
                 text: '@aliasadadm Hi @aliasadadm, can you please submit a ticket at https://t.co/JLV61aXG7d and one of our support agent...https://t.co/yk57k1S9bS',
             },
             {
                 id: 2,
-                icon: 'fa-brands fa-twitter',
+                icon: 'brands fa-twitter',
                 text: '@HenrySefaBoaky1 Check out our theme Gioia which has all necessary elements to build a multi vendor marketplace https://t.co//c9BlYxZBIl',
             },
         ],
@@ -106,17 +106,17 @@ const footerData = [
         links: [
             {
                 id: 1,
-                icon: 'fa-solid fa-location-dot',
+                icon: 'solid fa-location-dot',
                 text: '457 BigBlue Street, NY 10013',
             },
             {
                 id: 2,
-                icon: 'fa-solid fa-phone',
+                icon: 'solid fa-phone',
                 text: '(315) 5512-2579',
             },
             {
                 id: 3,
-                icon: 'fa-regular fa-envelope',
+                icon: 'regular fa-envelope',
                 text: 'everlead@mikado.com',
             },],
         text: '',
