@@ -22,7 +22,7 @@ export default {
     color: $grey;
 
     &:hover {
-        color: $orange;
+        color: $main;
     }
 
     &.prev {

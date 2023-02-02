@@ -1,6 +1,8 @@
 <script>
+import GenericButton from '../App generic/GenericButton.vue';
 export default {
     name: 'CalendarCard',
+    components: { GenericButton },
     props: {
         event: Object,
     }
@@ -33,7 +35,7 @@ export default {
                             <span>{{ event.adress }}</span>
                         </div>
                     </div>
-                    <a href="#">READ MORE</a>
+                    <generic-button text="READ MORE"></generic-button>
                 </div>
             </div>
         </div>
@@ -60,22 +62,20 @@ export default {
         }
 
         .icon {
-            color: $orange ;
+            color: $main ;
             font-weight: 100;
             padding: 5px 10px;
             width: 12px;
         }
 
-        a {
-            font-weight: bold;
-        }
+
     }
 
     //EVIDENCE DATE SQUARE
     .evidence-date {
         min-height: 50px;
         min-width: 50px;
-        background-color: $orange;
+        background-color: $main;
         color: $white;
         padding: 3px 0;
         font-family: 'Playfair Display', serif;

@@ -23,7 +23,7 @@ footer {
 
 
     .copyright {
-        background-color: $orange;
+        background-color: $main;
         height: 40px;
         text-align: center;
         line-height: 40px;

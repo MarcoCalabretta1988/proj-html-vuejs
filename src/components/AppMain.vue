@@ -4,11 +4,15 @@ import SpecialtiesCard from './Main components/SpecialtiesCard.vue';
 import CalendarCard from './Main components/CalendarCard.vue'
 import LeaderSkill from './Main components/leaderSkill.vue';
 import Slider from './App generic/Slider.vue';
-import { specialtiesOption, events, skills } from '../data';
+import GenericButton from './App generic/GenericButton.vue';
+import AppButton from './App generic/AppButton.vue';
+import NewsCard from './Main components/NewsCard.vue';
+import AppFormInput from './App generic/AppFormInput.vue';
+import { specialtiesOption, events, skills, news } from '../data';
 export default {
     name: 'AppMain',
-    components: { SectionTitle, SpecialtiesCard, CalendarCard, LeaderSkill, Slider },
-    data: () => ({ specialtiesOption, events, skills })
+    components: { SectionTitle, AppButton, SpecialtiesCard, AppFormInput, NewsCard, GenericButton, CalendarCard, LeaderSkill, Slider },
+    data: () => ({ specialtiesOption, events, skills, news })
 }
 </script>
 
@@ -82,7 +86,7 @@ export default {
                         <section-title title="Creative Leader"
                             text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, deleniti illum delectus nobis, voluptate rem ipsa praesentium obcaecati sapiente accusantium sequi aliquid sit sint, impedit magnam qui nemo! Esse, iste."
                             div-postion="start"></section-title>
-                        <a href="#" class="py-4 fw-bold">READ MORE</a>
+                        <generic-button text="READ MORE"></generic-button>
                     </div>
                     <!-- SKILL SECTION -->
                     <div class="col d-flex flex-column justify-content-center p-3">
@@ -92,6 +96,17 @@ export default {
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+        <!-- LATEST NEWS SECTION -->
+        <section id="latest-news" class="position-relative">
+            <slider></slider>
+            <div class="container text-center ">
+                <section-title title="Latest news" text="Lorem ipsum dolor sit amet,consecteur adipscing elit"
+                    div-position="center"></section-title>
+                <div class="row row-cols3 py-5">
+                    <news-card v-for="news in news" :key="news.id" :news="news"></news-card>
                 </div>
             </div>
         </section>
@@ -119,6 +134,43 @@ export default {
         <section id="video">
             <font-awesome-icon icon="fa-solid fa-play" class="video-icon" />
         </section>
+        <!-- CONTACT US SECTION -->
+        <section id="contact-us">
+            <div class="container h-100">
+                <div class="row row-cols-2 h-100 align-items-center">
+                    <div class="col world-location">
+                        <img class="location america" src="../assets/img/h1-contact-rev-02.png" alt="Location America">
+                        <img class="location europe" src="../assets/img/h1-contact-rev-02.png" alt="Location Europe">
+                        <img class="location australia" src="../assets/img/h1-contact-rev-02.png"
+                            alt="Location Australia">
+                        <div class="location label">
+                            <h4>New York Coaching</h4>
+                            <generic-button text="READ MORE"></generic-button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <section-title title="Contact us" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                            div-position="start"></section-title>
+                        <form @submit.prevent="$emit('form-submit')" class="py-4">
+                            <div class="d-flex py-3">
+                                <app-form-input type="text" placeholder="Your name" class="me-3"
+                                    @term-change="$emit('term-change', $event)"></app-form-input>
+                                <app-form-input type="email" placeholder="Your Email"
+                                    @term-change="$emit('mail-change', $event)"></app-form-input>
+                            </div>
+                            <div class="form-floating my-3">
+                                <textarea class="form-control" placeholder="Leave a comment here"
+                                    id="floatingTextarea2Disabled" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2Disabled">Write a message</label>
+                            </div>
+                        </form>
+                        <app-button text="send" class="contact-us-button"></app-button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BRANDS SECTION -->
+        <section id="brands"></section>
     </main>
 </template>
 
@@ -165,7 +217,7 @@ main {
             * {
                 padding: 5px 10px;
                 margin: 0 1px;
-                background-color: $orange;
+                background-color: $main;
                 font-size: 30px;
                 color: $white;
                 cursor: pointer;
@@ -193,7 +245,7 @@ main {
         background-color: $white;
 
         .sign {
-            color: $orange;
+            color: $main;
             font-size: 50px;
             position: absolute;
             top: 65%;
@@ -208,7 +260,7 @@ main {
 
         .divider {
             height: 1px;
-            border: 1px solid $orange;
+            border: 1px solid $main;
             width: 80px;
         }
 
@@ -218,7 +270,7 @@ main {
 
         .social-ico {
             a {
-                color: $orange;
+                color: $main;
                 font-size: 25px;
 
                 &:hover {
@@ -243,7 +295,7 @@ main {
         width: 500px;
 
         a:hover {
-            color: $orange;
+            color: $main;
         }
 
         h3 {
@@ -260,6 +312,15 @@ main {
     background-color: $white;
     height: 550px;
 
+}
+
+//LATEST NEWS LAYOUT
+#latest-news {
+    height: 80vh;
+    background-image: url(../assets/img/svg/svg-4.svg);
+    background-position: 7% -20%;
+    background-repeat: no-repeat;
+    background-color: $greywhite;
 }
 
 //TESTIMONIALS SECTION LAYOUT
@@ -332,8 +393,68 @@ main {
         cursor: pointer;
 
         &:hover {
-            color: $orange;
+            color: $main;
         }
     }
+}
+
+//SECTION CONTACT US
+#contact-us {
+    height: 600px;
+    background-color: $greywhite;
+
+    form {
+        color: $grey;
+    }
+
+    .world-location {
+        background-image: url(../assets/img/h1-contact-rev-01.png);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        height: 100%;
+        position: relative;
+
+        .location {
+            position: absolute;
+
+            &.america {
+                top: 43%;
+                left: 23%;
+            }
+
+            &.europe {
+                top: 35%;
+                left: 50%;
+            }
+
+            &.australia {
+                top: 62%;
+                left: 83%;
+            }
+
+            &.label {
+                top: 48%;
+                left: 18%;
+                background-color: $white;
+                padding: 10px 30px;
+
+                h4 {
+                    font-weight: 600;
+                    font-family: 'Playfair Display', serif;
+                }
+            }
+
+
+        }
+
+    }
+
+}
+
+//SECTION BRANDS
+#brands {
+    height: 300px;
+    background-color: aquamarine;
 }
 </style>

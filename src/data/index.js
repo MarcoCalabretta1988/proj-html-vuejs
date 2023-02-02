@@ -156,6 +156,48 @@ const events = [
     },
 ]
 
+const news = [
+    {
+        id: 1,
+        img: {
+            top: 2,
+            bottom: 3,
+            label: 'Business, Leading'
+        },
+        date: 'May 5,2019',
+        author: 'Amanda Doe',
+        title: 'Next investment',
+        text: 'Lorem ipsum dolor sit amet,consectetur adipscing elit,sed eius mas tellus dolor',
+
+    },
+    {
+        id: 2,
+        img: {
+            top: 3,
+            bottom: 4,
+            label: 'Business, Leading'
+        },
+        date: 'May 5,2019',
+        author: 'Amanda Doe',
+        title: 'Team building',
+        text: 'Lorem ipsum dolor sit amet,consectetur adipscing elit,sed eius mas tellus dolor',
+
+    },
+    {
+        id: 3,
+        img: {
+            top: 4,
+            bottom: 1,
+            label: 'Business, Leading'
+        },
+        date: 'May 5,2019',
+        author: 'Amanda Doe',
+        title: 'New Business Day',
+        text: 'Lorem ipsum dolor sit amet,consectetur adipscing elit,sed eius mas tellus dolor',
+
+    },
+]
 
 
-export { mainNavLinks, footerData, specialtiesOption, events, skills }
+
+export { mainNavLinks, news, footerData, specialtiesOption, events, skills }

@@ -22,14 +22,13 @@ export default {
 @use '../../assets/scss/partials/variables' as *;
 
 .section-title {
-  background-color: $white;
 
   h1 {
     font-size: 50px;
 
 
     .point {
-      color: $orange;
+      color: $main;
     }
   }
 
@@ -40,7 +39,7 @@ export default {
 
 .divider {
   height: 1px;
-  border: 1px solid $orange;
+  border: 1px solid $main;
   width: 80px;
 }
 </style>

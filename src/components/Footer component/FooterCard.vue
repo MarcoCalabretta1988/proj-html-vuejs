@@ -27,7 +27,7 @@ export default {
 @use '../../assets/scss/partials/variables' as *;
 
 .divider {
-    color: $orange;
+    color: $main;
 }
 
 h5 {
@@ -51,7 +51,7 @@ ul {
             }
 
             .icon {
-                color: $orange;
+                color: $main;
                 font-size: 18px;
             }
         }

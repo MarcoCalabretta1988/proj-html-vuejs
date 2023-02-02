@@ -21,7 +21,8 @@ a {
     margin-right: 15px;
     font-size: 14px;
     font-weight: 600;
-    background-color: $white;
+    background-color: $main;
+    color: $white;
 
     &::after {
         content: " | \27F6";
@@ -30,8 +31,8 @@ a {
     }
 
     &:hover {
-        background-color: $orange;
-        color: $white;
+        background-color: $white;
+        color: $black;
     }
 }
 </style>

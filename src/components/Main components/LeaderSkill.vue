@@ -33,7 +33,7 @@ h4 {
     .bar {
         position: relative;
         height: 4px;
-        background-color: $orange;
+        background-color: $main;
     }
 
     .bar-progress {

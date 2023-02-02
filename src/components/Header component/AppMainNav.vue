@@ -32,7 +32,7 @@ ul {
 
         & a:hover,
         a:active {
-            color: $orange;
+            color: $main;
             position: relative;
 
             &::before {
