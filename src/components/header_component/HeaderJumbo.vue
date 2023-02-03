@@ -1,10 +1,10 @@
 <script>
 //IMPORT COMPONENT
-import AppButton from '../App generic/AppButton.vue'
-import Slider from '../App generic/Slider.vue';
+import AppButton from '../app_generic/AppButton.vue'
+import AppSlider from '../app_generic/AppSlider.vue';
 export default {
     name: 'HeaderJumbo',
-    components: { AppButton, Slider }
+    components: { AppButton, AppSlider }
 }
 </script>
 
@@ -12,7 +12,7 @@ export default {
     <!-- JUMBOTRON -->
     <section id="jumbotron" class="container">
         <!-- SLIDER -->
-        <slider></slider>
+        <app-slider></app-slider>
         <div class="row row-cols-2 h-100 position-relative">
             <div class="col d-flex justify-content-center flex-column h-100">
                 <!-- TITLE AND TEXT -->

@@ -1,22 +1,22 @@
 <script>
 //IMPORT COMPONENTS
-import SectionTitle from './App generic/SectionTitle.vue';
-import SpecialtiesCard from './Main components/SpecialtiesCard.vue';
-import CalendarCard from './Main components/CalendarCard.vue'
-import LeaderSkill from './Main components/leaderSkill.vue';
-import Slider from './App generic/Slider.vue';
-import GenericButton from './App generic/GenericButton.vue';
-import AppButton from './App generic/AppButton.vue';
-import NewsCard from './Main components/NewsCard.vue';
-import AppFormInput from './App generic/AppFormInput.vue';
-import BrandCard from './Main components/BrandCard.vue';
+import SectionTitle from './app_generic/SectionTitle.vue';
+import SpecialtiesCard from './main_components/SpecialtiesCard.vue';
+import CalendarCard from './main_components/CalendarCard.vue'
+import LeaderSkill from './main_components/leaderSkill.vue';
+import AppSlider from './app_generic/AppSlider.vue';
+import GenericButton from './app_generic/GenericButton.vue';
+import AppButton from './app_generic/AppButton.vue';
+import NewsCard from './main_components/NewsCard.vue';
+import AppFormInput from './app_generic/AppFormInput.vue';
+import BrandCard from './main_components/BrandCard.vue';
 
 //IMPORT DATA
 import { specialtiesOption, events, skills, news, brands } from '../data';
 
 export default {
     name: 'AppMain',
-    components: { SectionTitle, AppButton, SpecialtiesCard, BrandCard, AppFormInput, NewsCard, GenericButton, CalendarCard, LeaderSkill, Slider },
+    components: { SectionTitle, AppButton, SpecialtiesCard, BrandCard, AppFormInput, NewsCard, GenericButton, CalendarCard, LeaderSkill, AppSlider },
     data: () => ({ specialtiesOption, events, skills, news, brands, textAreaText: '' }),
     methods: {
         sendForm() {
@@ -113,7 +113,7 @@ export default {
         <!-- LATEST NEWS SECTION -->
         <section id="latest-news" class="position-relative">
             <!-- ADD SLIDER LAYOUT -->
-            <slider></slider>
+            <app-slider></app-slider>
             <div class="container text-center ">
                 <!-- ADD SECTION TITLE -->
                 <section-title title="Latest news" text="Lorem ipsum dolor sit amet,consecteur adipscing elit"
@@ -127,7 +127,7 @@ export default {
         <!-- TESTIMONIALS SECTION -->
         <section id="testimonials">
             <!-- ADD SLIDER LAYOUT -->
-            <slider></slider>
+            <app-slider></app-slider>
             <!-- BACKGROUND TITLE -->
             <h1>Testimonials.</h1>
             <!-- TESTIMONIAL SECTION CARD -->

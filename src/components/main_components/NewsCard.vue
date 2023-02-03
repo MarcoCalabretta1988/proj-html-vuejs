@@ -1,6 +1,6 @@
 <script>
 //IMPORT COMPONENT
-import GenericButton from '../App generic/GenericButton.vue';
+import GenericButton from '../app_generic/GenericButton.vue';
 export default {
     name: 'NewsCard',
     components: { GenericButton },

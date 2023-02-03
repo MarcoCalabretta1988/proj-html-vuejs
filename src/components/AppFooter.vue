@@ -1,6 +1,6 @@
 <script>
 //IMPORT COMONENTS
-import FooterNav from './Footer component/FooterNav.vue';
+import FooterNav from './footer_component/FooterNav.vue';
 
 export default {
     name: 'AppFooter',

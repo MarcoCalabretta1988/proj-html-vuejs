@@ -1,7 +1,7 @@
 <script>
 
 //IMPORT COMPONENTS
-import AppFormInput from '../App generic/AppFormInput.vue';
+import AppFormInput from '../app_generic/AppFormInput.vue';
 import FooterCard from './FooterCard.vue';
 
 //IMPORT DATA
